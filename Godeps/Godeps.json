@@ -23,6 +23,22 @@
 			"Rev": "7f4fbf64513f3471d010a75a137230b3c95e23ba"
 		},
 		{
+			"ImportPath": "github.com/authit/frontend/commands",
+			"Rev": "d8799c5b2a1d8f21b4ce375668cc68f2833621a4"
+		},
+		{
+			"ImportPath": "github.com/authit/frontend/log",
+			"Rev": "d8799c5b2a1d8f21b4ce375668cc68f2833621a4"
+		},
+		{
+			"ImportPath": "github.com/authit/frontend/server",
+			"Rev": "d8799c5b2a1d8f21b4ce375668cc68f2833621a4"
+		},
+		{
+			"ImportPath": "github.com/authit/web",
+			"Rev": "7f1ad3482b1b0199b10892b9ecc9f0c2c9becb56"
+		},
+		{
 			"ImportPath": "github.com/cpuguy83/go-md2man/md2man",
 			"Comment": "v1.0.3-2-g71acacd",
 			"Rev": "71acacd42f85e5e82f70a55327789582a5200a90"
@@ -48,6 +64,10 @@
 		{
 			"ImportPath": "github.com/mitchellh/mapstructure",
 			"Rev": "281073eb9eb092240d33ef253c404f1cca550309"
+		},
+		{
+			"ImportPath": "github.com/pdxjohnny/telem/log",
+			"Rev": "4d8aee8858214c7afa9ab8776a596c36a3d66644"
 		},
 		{
 			"ImportPath": "github.com/russross/blackfriday",
