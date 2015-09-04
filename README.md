@@ -10,7 +10,7 @@ Building
 ---
 
 ```bash
-go build -o default_app_name_linux-amd64 -tags netgo *.go
+go build -o authit_linux-amd64 -tags netgo *.go
 # Or
 ./script/build
 ```
@@ -20,8 +20,8 @@ Running
 ---
 
 ```bash
-./default_app_name_linux-amd64
-docker run --rm -ti default_username/default_app_name
+./authit_linux-amd64
+docker run --rm -ti authit/authit
 ```
 
 Changing The Name

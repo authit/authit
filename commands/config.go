@@ -47,6 +47,6 @@ func ConfigBindFlags(cmd *cobra.Command) {
 }
 
 func ConfigEnv() {
-	viper.SetEnvPrefix("default_app_name")
+	viper.SetEnvPrefix("authit")
 	viper.AutomaticEnv()
 }
