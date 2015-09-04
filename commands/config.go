@@ -12,30 +12,51 @@ func ConfigDefaults(cmdList ...*cobra.Command) {
 }
 
 func ConfigSet() {
-	for index, item := range ConfigOptions {
+	for _, item := range ConfigOptions {
+		SetDefault(item.(map[string]interface{}))
+	}
+}
+
+func SetDefault(flagMap map[string]interface{}) {
+	for index, item := range flagMap {
 		opt := item.(map[string]interface{})
+		_, ok := opt["value"]
+		if !ok {
+			SetDefault(opt)
+			continue
+		}
 		viper.SetDefault(index, opt["value"])
 	}
 }
 
 func ConfigFlags(cmdList ...*cobra.Command) {
 	for _, cmd := range cmdList {
-		for index, item := range ConfigOptions[cmd.Use].(map[string]interface{}) {
-			opt := item.(map[string]interface{})
-			help := opt["help"].(string)
-			switch value := opt["value"].(type) {
-			case int:
-				cmd.Flags().Int(index, value, help)
-			case bool:
-				cmd.Flags().Bool(index, value, help)
-			case string:
-				cmd.Flags().String(index, value, help)
-			case float32:
-				cmd.Flags().Float32(index, value, help)
-			case float64:
-				cmd.Flags().Float64(index, value, help)
-			default:
-			}
+		for _, item := range ConfigOptions[cmd.Use].(map[string]interface{}) {
+			BindFlags(cmd, item.(map[string]interface{}))
+		}
+	}
+}
+
+func BindFlags(cmd *cobra.Command, flagMap map[string]interface{}) {
+	for index, item := range flagMap {
+		opt := item.(map[string]interface{})
+		_, ok := opt["help"]
+		if !ok {
+			BindFlags(cmd, opt)
+			continue
+		}
+		help := opt["help"].(string)
+		switch value := opt["value"].(type) {
+		case int:
+			cmd.Flags().Int(index, value, help)
+		case bool:
+			cmd.Flags().Bool(index, value, help)
+		case string:
+			cmd.Flags().String(index, value, help)
+		case float32:
+			cmd.Flags().Float32(index, value, help)
+		case float64:
+			cmd.Flags().Float64(index, value, help)
 		}
 	}
 }

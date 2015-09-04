@@ -11,6 +11,18 @@
 			"Rev": "056c9bc7be7190eaa7715723883caffa5f8fa3e4"
 		},
 		{
+			"ImportPath": "github.com/authit/crypto/commands",
+			"Rev": "7f4fbf64513f3471d010a75a137230b3c95e23ba"
+		},
+		{
+			"ImportPath": "github.com/authit/crypto/gen",
+			"Rev": "7f4fbf64513f3471d010a75a137230b3c95e23ba"
+		},
+		{
+			"ImportPath": "github.com/authit/crypto/log",
+			"Rev": "7f4fbf64513f3471d010a75a137230b3c95e23ba"
+		},
+		{
 			"ImportPath": "github.com/cpuguy83/go-md2man/md2man",
 			"Comment": "v1.0.3-2-g71acacd",
 			"Rev": "71acacd42f85e5e82f70a55327789582a5200a90"
@@ -65,6 +77,14 @@
 		{
 			"ImportPath": "github.com/spf13/viper",
 			"Rev": "3c0ff861e3d9906ecc4ebfb7e41557d44d3e277b"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/cast5",
+			"Rev": "aedad9a179ec1ea11b7064c57cbc6dc30d7724ec"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/openpgp",
+			"Rev": "aedad9a179ec1ea11b7064c57cbc6dc30d7724ec"
 		},
 		{
 			"ImportPath": "gopkg.in/yaml.v2",
